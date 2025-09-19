@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gorilla Gaming - Admins</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #0d0d0f, #000);
+    color: #fff;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 30px;
+    font-size: 3rem;
+    color: #ff0000;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff3c3c;
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #ff0000, 0 0 15px #ff3c3c; }
+    to { text-shadow: 0 0 15px #ff0000, 0 0 30px #ff6666; }
+  }
+
+  .dashboard-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #00aaff;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  .dashboard-btn:hover {
+    background: #0088cc;
+  }
+
+  .admins-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+
+  .admin-card {
+    background: linear-gradient(145deg, #1a1a1e, #121214);
+    width: 260px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255,0,0,0.4), inset 0 0 25px rgba(255,255,255,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,0,0,0.25);
+  }
+
+  .admin-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 30px rgba(255,0,0,0.6), 0 0 60px rgba(255,0,0,0.3);
+  }
+
+  .admin-card img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff0000;
+    margin-bottom: 15px;
+  }
+
+  .admin-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.5rem;
+    color: #ff4444;
+  }
+
+  .admin-card p.rank {
+    font-weight: bold;
+    color: #ffd500;
+    margin: 5px 0;
+  }
+
+  footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+
+  a {
+    color: #ff4444;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 12px #ff0000;
+  }
+</style>
+</head>
+<body>
+  <a href="dashboard.html" class="dashboard-btn">Dashboard</a>
+  <h1>GORILLA GAMING</h1>
+  <h2>Meet Our Admin's Team</h2>
+
+  <div class="admins-container">
+    <!-- Simon White -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/468966027_10161170863304737_311877191185550070_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=e99d92&_nc_ohc=iWLMoVd3uTgQ7kNvwFsKdCC&_nc_oc=AdnfJCaZhLpnJU-byBAaURf3s_8yX392i4NgDQDbHqiSCFGFOw4l1Q3s1_dYYxdvCJs&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=wu3E8cBYU8ORwxn77x3e6g&oh=00_AfYiVoJ-9GviH1a6NGoEnN9meKNl2VPmBHs18ua4FCTWPQ&oe=68D206EF" alt="Simon White">
+      <h3>Simon White</h3>
+      <p class="rank">Rank: Community Owner</p>
+    </div>
+
+    <!-- Aboud Kabaha -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/520257763_1286426769828465_8981044452603151590_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=KrowjNW-NKkQ7kNvwH-_t22&_nc_oc=AdkC-ihh8mZ7-w1f7hxowgQSaKdEDuAJaWje-w83ABGRewY2snxI_GtcqsE3R7jus-E&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=GN75x0NiSAOJ9Kk4CAL3IQ&oh=00_AfYuVtGxi0DDq-00atjx__yMxlcwDiimcPOwM4OmP3YLLw&oe=68D221D0" alt="Aboud Kabaha">
+      <h3>Aboud Kabaha</h3>
+      <p class="rank">Rank: Senior of Community</p>
+    </div>
+
+    <!-- George Pavlis Reefergr -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/468011184_10161285699862862_1703445104428111942_n.jpg?stp=c17.17.213.213a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=1d2534&_nc_ohc=e_jkS8VxME8Q7kNvwGBqjd3&_nc_oc=AdnN-fNQFOHjf6pnUoRrZwl_J7TY7yUnfgLtrpywIokAwvdX18Y8GAiDWY-kApvUzt0&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=JfCH2Zk70aT6VpDkf_9O2g&oh=00_Afayv61VUavjeF0QXSjIvh3UyZA_68qtIMvuJfPnaDyg8g&oe=68D221F8" alt="George Pavlis Reefergr">
+      <h3>George Pavlis Reefergr</h3>
+      <p class="rank">Rank: Owner OF CM</p>
+    </div>
+
+
+   <!-- ORKA [OWNER OF CM] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/298391688_10225042030111423_8609268009536278759_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=101&ccb=1-7&_nc_sid=e99d92&_nc_ohc=88FNqlt01YUQ7kNvwF0Rm7c&_nc_oc=AdmK_m3VjLnkz8W-qzIttZKXppV65itQq9CSRVyKnpL85BKBrSOh5Y7AZDPC0HpNStQ&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=2RgrVdqNH9TAfUzHk_f-Ig&oh=00_AfaQcykCfuYbXWniYJHMPXMnyMFjzOKJFbb-cSyyNPoe2Q&oe=68D218CF" alt="ORKA">
+      <h3>Daniel Ljotevski  [ORKA]</h3>
+      <p class="rank">Rank: Owner OF CM</p>
+    </div>
+
+     <!-- TidwaSHUM [Senior of community] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/341397424_3354781168111487_8280790904143207440_n.jpg?stp=c0.182.720.720a_dst-jpg_s200x200_tt6&_nc_cat=100&ccb=1-7&_nc_sid=e99d92&_nc_ohc=DSO_bvZu2A4Q7kNvwFigPyq&_nc_oc=AdldRQJdL0SjIaQf65RALvv-jBU23b55FEmYWtrhVJ1oWNlAjgCCooFxlCONAQRg4uY&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=_1ykOO9EqY1o4Ps28X511g&oh=00_AfZbWGWm-2i3-wlZ2N-fd5rJOVXFuqsSnpvzdF-nbiL9gQ&oe=68D22991" alt="TidwaSHUM">
+      <h3>Salman Naqvi 
+ [TidwaSHUM]</h3>
+      <p class="rank">Rank: Senior of community</p>
+    </div>
+
+         <!-- Mansoor Bader-->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/531869032_10234551622945261_1628979522888408252_n.jpg?stp=c6.0.360.360a_dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=1d2534&_nc_ohc=Vk8M0cKn8CIQ7kNvwEXHSU9&_nc_oc=AdnYUPiYd0K8kxwgFv2GnXasgrr0dYaWzJ5kccrsi5SsWbjSwrkFgxuBERC22MHHs14&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=a36T3FXe_dhyL3GC55IAXA&oh=00_AfZxTd292WwalVj-ZdeB8BwEg_ZcMlsjJvHv3x0w_gadKw&oe=68D2366B" alt="Mansoor Bader">
+      <h3>Mansoor Bader</h3>
+      <p class="rank">Rank: Founder OF Community</p>
+    </div>
+
+             <!-- Fahad Mohamed [Developer] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/526365801_122110832780952274_7656104257596902368_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=100&ccb=1-7&_nc_sid=e99d92&_nc_ohc=k8j857-svjsQ7kNvwGUDExU&_nc_oc=AdmbPP3FNvUaGGsw7IdU8XTgGUk_NK8g62F0qFRgP9fgeEx-E_SfsfsdFwGraAub4jc&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=LmZ0eC7kcJWTU_H2NNiCJw&oh=00_AfbZorhHxlUwF0fna9yDXrn2VwzmPMgGQyh5l6BxCBZTWg&oe=68D246CD" alt="Fahad Mohamed [ MisT ] ">
+      <h3>Fahad Mohamed     
+        [MisT] </h3>
+      <p class="rank">Rank: Developer</p>
+    </div>
+
+                 <!-- Syed Abdullah  [Head Admin] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/540383813_2019878178547179_3842726383310587831_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_ohc=o3eWy7cgjBcQ7kNvwHj0_Jx&_nc_oc=AdlmJIISyN5kTHWSQT4TWuzfC_rfdKgwDbpE7nyXWmUz9pMZs-YmfMO9UFHqMHE6zXQ&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=xgcigjBn3TibK9i35hI0zg&oh=00_AfZIb7rh8AywEqRaOLU0CvK-PV5zOb-k2GMwtUXPl1t-Bg&oe=68D22D8C" alt="Syed Abdullah 
+ ">
+      <h3>Syed Abdullah     
+        [AAD11] </h3>
+      <p class="rank">Rank: Head Admin</p>
+    </div>
+
+                     <!-- Albatrit Bahtiri 
+  [Moderator] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/516496829_122189553728518447_1403739817466454988_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=vm9Oij_7POoQ7kNvwGyvP7H&_nc_oc=AdmSrPJMs0i2gHhBW2scQBqYKtRfZD_aaL2p2850v1mYF86xl4ZlL575XKhACKB2zjM&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=kPULlmXHTli_71Np7hQelg&oh=00_AfartmYd81CJQO_kSBgOMWLnGIEPRKlMYyEtNFTYYqZTZw&oe=68D22AED" alt="Albatrit Bahtiri 
+ ">
+      <h3>Albatrit Bahtiri      
+        [Agent.47] </h3>
+      <p class="rank">Rank: Moderator</p>
+    </div>
+
+                         <!-- Youcef Merzougui  
+  [Senior Admin +] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/421517916_10219790622796048_7376976397406165359_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=e99d92&_nc_ohc=5_4OwrHu2egQ7kNvwH9aXtW&_nc_oc=Adkm5Cn6HeNStAuo4geCuDnVhNGfPobQ0BLQa_uqBfG5toqwZH9VLtj0LyWKA3px2OY&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=nYl4bzbyeuKN47wQkOy2Ow&oh=00_AfbZ_g08ZmcnHfwoPdDCzQIuX-AjZ1oy1X7_dc6F30SZQA&oe=68D234FF" alt="Youcef Merzougui 
+ ">
+      <h3>Youcef Merzougui       
+        [Esca] </h3>
+      <p class="rank">Rank: Senior Admin +</p>
+    </div>
+                     <!-- Kareem Lobbadeh  
+  [Normal Admin] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/524165568_770950788796018_3835005337532873836_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1d2534&_nc_ohc=HI1FekXALVUQ7kNvwElypfe&_nc_oc=AdnzGEdsWHg7Nqqx_noDlCJCotXnvnSI6zYJzeMK9VYnEPKFi4yuW-zdvLVhgO4nOvg&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=Qs5_fpCRBtfGjI6GsBta5w&oh=00_AfbzfIXIf3o5CCMITQZ9BGWOq0Hb9J_0WPvKQvUvmeOkDA&oe=68D23389" alt="Kareem Lobbadeh
+ ">
+      <h3>Kareem Lobbadeh      
+        [sGMMa] </h3>
+      <p class="rank">Rank: Normal Admin</p>
+    </div>
+
+                     <!-- Duran S. Velija  
+  [VIP Senior +] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/364787699_3503652289914167_7069018981524947044_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=1d2534&_nc_ohc=ks8Q6TqvlUUQ7kNvwEZELpU&_nc_oc=AdmbDhTFyDTtPYJzHpsoKfOkhPsbKHTSqN-PycyKU1XtoZ1__8Bg5uIvv5vJNQAdv3o&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=eiQfTfiVnU3hJMHLIAWvfA&oh=00_AfbzD9hkkFGi2aaoDnTYUMkYA0mYj1hRWz6PpiPtabiYCA&oe=68D22D0A" alt="Duran S. Velija 
+ 
+ ">
+      <h3>Duran S. Velija       
+        [DDuuRiii] </h3>
+      <p class="rank">Rank: VIP Senior +</p>
+    </div>
+                     <!-- Ahmad S Omari 
+ 
+  [Co-Owner] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/513220345_3396327837175078_794386652831048782_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=39N_24pntIYQ7kNvwHUrg3B&_nc_oc=AdkEMh6sCusic1oXal7vXVhHp5fsYbZKpgWDJ9IYrLzUCmBNC3QeTelET4FoN4h0QrI&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=jHc2ExdWOMpvucVSJK_Dyw&oh=00_AfYLDnLxz_T4PUSvZquRSElcypP7GT9Fb6onmC8Sqen7XQ&oe=68D231AC" alt="Ahmad S Omari 
+ 
+ ">
+      <h3>Ahmad S Omari      
+        [Can't Trust] </h3>
+      <p class="rank">Rank: Co-Owner</p>
+    </div>
+
+                         <!-- Mohamed Barrak 
+ 
+  [Co-Owner] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/475661713_1288080859075383_4478241312807758727_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=oSVerJqNlSgQ7kNvwGdTVi4&_nc_oc=AdkEqioAujbPOqyVv-tzQnGfZK7ZP1deJWXxU7NcqaM4-PkqF9SVIONz0ciDra7yJWk&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=wcdzYZZzrXD1H1Z_5e-buA&oh=00_AfaNy6XnrtOJP5qvYmiXkVOqCE4tiahtMsZI2j_Wv2xnjw&oe=68D24199" alt="TN-Bouraa9  
+ 
+ ">
+      <h3>Mohamed Barrak      
+        [TN-Bouraa9] </h3>
+      <p class="rank">Rank: Co-Owner</p>
+    </div>
+                               <!-- Taoufik Trimech 
+
+ 
+  [Moderator] -->
+    <div class="admin-card">
+      <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t39.30808-1/387751975_7326735294007817_1827660540067832232_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=103&ccb=1-7&_nc_sid=e99d92&_nc_ohc=jKZz40NnmusQ7kNvwFLfKQ8&_nc_oc=AdkyZL3ycdBSUNJvwknx6YCZasfcoLDzwKJlxXn7phBWcK8ipm6BUXqh0sjyupVuWS0&_nc_zt=24&_nc_ht=scontent.fjrs4-1.fna&_nc_gid=yXUQCRSSL2V69yoX325Whw&oh=00_Afb1Ekb6UdM9LbZ_uxoQivaTX_IKiF9W_W1F2mYWLiLHZA&oe=68D33DCE" alt="Taoufik Trimech 
+
+ 
+ ">
+      <h3>Taoufik Trimech     
+        [TETOU] </h3>
+      <p class="rank">Rank: Moderator</p>
+    </div>
+      </div>
+  <footer>
+    Join Our Community & Become from Our Admin's List : <a href="https://www.fb.com/groups/gorillagamingcm" target="_blank">Facebook Group</a>
+  </footer>
+</body>
+</html>

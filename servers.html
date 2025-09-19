@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gorilla Gaming - Servers</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #0d0d0f, #000);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    margin-top: 30px;
+    font-size: 3rem;
+    color: #ff0000;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff3c3c;
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #ff0000, 0 0 15px #ff3c3c; }
+    to { text-shadow: 0 0 15px #ff0000, 0 0 30px #ff6666; }
+  }
+
+  .dashboard-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #00aaff;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  .dashboard-btn:hover {
+    background: #0088cc;
+  }
+
+  .servers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+  }
+
+  .servers {
+    margin-top: 40px;
+    animation: fadeIn 2s ease;
+  }
+
+  .servers h3 {
+    color: #ffd500;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px #ffd500;
+  }
+
+  .server-item {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  .server-card {
+    background: linear-gradient(145deg, #1a1a1e, #121214);
+    flex: 1 1 45%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255,0,0,0.3), inset 0 0 20px rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255,0,0,0.2);
+  }
+
+  .server-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+
+  .connect-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .connect-btn:hover {
+    background: #0088cc;
+  }
+
+  footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+
+  a {
+    color: #ff4444;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 12px #ff0000;
+  }
+
+  @keyframes ip-glow {
+    0% { color: #00ff88; text-shadow: 0 0 5px #00ff88; }
+    50% { color: #00ffcc; text-shadow: 0 0 20px #00ffcc; }
+    100% { color: #00ff88; text-shadow: 0 0 5px #00ff88; }
+  }
+
+  .server-item span, .server-card span {
+    font-weight: bold;
+    animation: ip-glow 2s infinite ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    .server-card {
+      flex: 1 1 100%;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .dashboard-btn {
+      top: 10px;
+      right: 10px;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .connect-btn {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+  <a href="dashboard.html" class="dashboard-btn">Dashboard</a>
+
+  <h1>GORILLA GAMING</h1>
+  <h2>Our Servers</h2>
+
+  <div class="servers">
+    <h3>🔥 Join Today And Fire UP 🔥</h3>
+    <p class="server-item">🔥 Gorilla Gamerz [PUBLIC] (1000 FPS) — <span>193.70.80.97:27015</span></p>
+    <p class="server-item">🎯 Gorilla Gamerz | Aim Zone — <span>193.70.80.97:27018</span></p>
+  </div>
+
+  <div class="servers-container">
+    <div class="server-card">
+      <h2>🔥 Gorilla Gamerz [PUBLIC]</h2>
+      <p>IP: <span>193.70.80.97:27015</span></p>
+      <a class="connect-btn" href="steam://connect/193.70.80.97:27015">Connect via Steam</a>
+      <div>
+        <a href="https://www.gametracker.com/server_info/193.70.80.97:27015/" target="_blank">
+          <img src="https://cache.gametracker.com/server_info/193.70.80.97:27015/b_560_95_1.png" alt="Gorilla Gamerz Public Players">
+        </a>
+      </div>
+    </div>
+    
+    <div class="server-card">
+      <h2>🎯 Gorilla Gamerz | Aim Zone</h2>
+      <p>IP: <span>193.70.80.97:27018</span></p>
+      <a class="connect-btn" href="steam://connect/193.70.80.97:27018">Connect via Steam</a>
+      <div>
+        <a href="https://www.gametracker.com/server_info/193.70.80.97:27018/" target="_blank">
+          <img src="https://cache.gametracker.com/server_info/193.70.80.97:27018/b_560_95_1.png" alt="Gorilla Gamerz Aim Zone Players">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Join Our Community: <a href="https://www.fb.com/groups/gorillagamingcm" target="_blank">Facebook Group</a>
+  </footer>
+</body>
+</html>

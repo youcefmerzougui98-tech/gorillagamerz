@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check GTRS</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(160deg, #121212, #1c1c1e);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 167, 38, 0.05), transparent 70%);
+    animation: bgMove 20s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes bgMove {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+    color: #ffa726;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    z-index: 1;
+    animation: glowText 2s infinite alternate;
+    text-align: center;
+  }
+
+  @keyframes glowText {
+    from { text-shadow: 0 0 8px #ffa726, 0 0 16px #fb8c00; }
+    to { text-shadow: 0 0 16px #ffa726, 0 0 32px #fb8c00; }
+  }
+
+  .iframe-container {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 167, 38, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    z-index: 1;
+    width: clamp(220px, 25vw, 350px);
+  }
+
+  .iframe-container:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 35px rgba(255, 167, 38, 0.5);
+  }
+
+  iframe {
+    border-radius: 12px;
+    width: 100%;
+    height: 500px;
+  }
+
+  .back-btn {
+    margin-top: 15px;
+    padding: 6px 14px;
+    background: #ffb74d;
+    border: none;
+    border-radius: 6px;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(255, 183, 77, 0.4);
+    animation: fadeInUp 1.2s ease forwards;
+    opacity: 0;
+    z-index: 1;
+    font-size: clamp(0.75rem, 0.8vw + 0.3rem, 0.95rem);
+  }
+
+  .back-btn:hover {
+    background: #ffa726;
+    box-shadow: 0 4px 15px rgba(255, 167, 38, 0.5);
+    transform: translateY(-1.5px) scale(1.05);
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 768px) {
+    iframe { height: 450px; }
+  }
+
+  @media (max-width: 480px) {
+    iframe { height: 400px; }
+    h1 { font-size: 1.5rem; text-align: center; }
+    .back-btn { padding: 5px 12px; font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <h1>Check GTRS - Gorilla Gaming</h1>
+
+  <div class="iframe-container">
+    <iframe src="https://cache.gametracker.com/components/html0/?host=193.70.80.97:27015&bgColor=333333&fontColor=cccccc&titleBgColor=222222&titleColor=ff9900&borderColor=555555&linkColor=ffcc00&borderLinkColor=222222&showMap=1&currentPlayersHeight=100&showCurrPlayers=1&topPlayersHeight=100&showTopPlayers=1&showBlogs=0&width=220" 
+      frameborder="0" 
+      scrolling="no">
+    </iframe>
+  </div>
+
+  <a href="dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+
+</body>
+</html>

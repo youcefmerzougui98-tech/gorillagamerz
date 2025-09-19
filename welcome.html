@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      background: rgba(20, 20, 30, 0.85);
+      padding: 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      animation: zoomIn 0.9s ease;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #1abc9c;
+    }
+
+    p {
+      font-size: 17px;
+      margin: 12px 0;
+      color: #ecf0f1;
+    }
+
+    #countdown {
+      font-weight: bold;
+      color: #f1c40f;
+      font-size: 20px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 6px;
+      background: #3498db;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #1d6fa5;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+        border-radius: 12px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 15px;
+      }
+      button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome 🎉</h1>
+    <p id="welcomeText"></p>
+    <p>Redirecting to your dashboard in <span id="countdown">10</span> seconds...</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    const currentUser = sessionStorage.getItem("currentUser");
+    if(!currentUser){
+      window.location.href = "login.html";
+    } else {
+      document.getElementById("welcomeText").innerText = "You are logged in as: " + currentUser;
+    }
+
+    let timeLeft = 10;
+    const countdownEl = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      timeLeft--;
+      countdownEl.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        window.location.href = "dashboard.html";
+      }
+    }, 1000);
+
+    function logout(){
+      sessionStorage.removeItem("currentUser");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

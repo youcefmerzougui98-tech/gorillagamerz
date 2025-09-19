@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gorilla Gaming - VIP Program</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #101015, #000);
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 30px;
+      font-size: 2.8rem;
+      color: #ffd500;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #ffd500, 0 0 20px #ffb800;
+      animation: glow 2s infinite alternate;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ffd500, 0 0 10px #ffb800; }
+      to { text-shadow: 0 0 15px #ffd500, 0 0 30px #ff8c00; }
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px auto 50px;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      padding: 0 15px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #1a1a1e, #121214);
+      padding: 25px;
+      border-radius: 15px;
+      width: 300px;
+      text-align: left;
+      box-shadow: 0 0 15px rgba(0,0,0,0.8), inset 0 0 20px rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 25px rgba(255, 213, 0, 0.5), 0 0 50px rgba(255, 213, 0, 0.3);
+    }
+
+    .card h3 {
+      color: #00ff88;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      text-shadow: 0 0 8px #00ff88;
+    }
+
+    .diamond h3 {
+      color: #00c8ff;
+      text-shadow: 0 0 10px #00c8ff;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      color: #ffd500;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-shadow: 0 0 8px #ffd500;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 8px 0;
+      font-size: 1rem;
+      color: #eee;
+      transition: color 0.2s ease;
+    }
+
+    ul li::before {
+      content: "★ ";
+      color: #ffd500;
+    }
+
+    ul li:hover {
+      color: #ffd500;
+    }
+
+    .servers {
+      margin-top: 40px;
+      animation: fadeIn 2s ease;
+    }
+
+    .servers h3 {
+      color: #ffd500;
+      margin-bottom: 15px;
+      text-shadow: 0 0 8px #ffd500;
+    }
+
+    .server-item {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+
+    .server-item span {
+      color: #00ff88;
+      font-weight: bold;
+      text-shadow: 0 0 8px #00ff88;
+    }
+
+    a {
+      color: #00c8ff;
+      text-decoration: none;
+      text-shadow: 0 0 6px #00c8ff;
+    }
+
+    a:hover {
+      color: #ffd500;
+      text-shadow: 0 0 12px #ffd500;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .dashboard-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 12px 22px;
+      background-color: #ffd500;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255, 213, 0, 0.6);
+      transition: 0.3s;
+      z-index: 1000;
+    }
+
+    .dashboard-btn:hover {
+      background-color: #ffb800;
+      box-shadow: 0 0 15px rgba(255, 213, 0, 0.8);
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .card {
+        width: 100%;
+        text-align: center;
+      }
+      .card ul {
+        text-align: left;
+        display: inline-block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .dashboard-btn {
+        top: 10px;
+        right: 10px;
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="dashboard-btn" href="dashboard.html">Dashboard</a>
+  <h1>GORILLA GAMING</h1>
+  <h2>VIP PROGRAM</h2>
+
+  <div class="container">
+    <div class="card">
+      <h3>VIP</h3>
+      <p class="price">10 € / month</p>
+      <ul>
+        <li>M4A1, AK-47 & AWP</li>
+        <li>Carry Multiple Primary Weapons</li>
+        <li>HE, Flashbang & Smoke</li>
+        <li>Fast Bhop</li>
+        <li>Special Character Skin</li>
+      </ul>
+    </div>
+
+    <div class="card diamond">
+      <h3>Diamond VIP</h3>
+      <p class="price">Contact for Price</p>
+      <ul>
+        <li>Everything in VIP</li>
+        <li>Exclusive Special Round Menu</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="servers">
+    <h3>Our Servers</h3>
+    <p class="server-item">🎯 Gorilla Gamerz | Aim Zone — <span>193.70.80.97:27018</span></p>
+    <p class="server-item">🔥 Gorilla Gamerz [PUBLIC] (1000 FPS) — <span>193.70.80.97:27015</span></p>
+  </div>
+
+  <footer>
+    Join Our Community: <a href="https://www.fb.com/groups/gorillagamingcm" target="_blank">www.fb.com/groups/gorillagamingcm</a>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".card").forEach(card => {
+      card.addEventListener("click", () => {
+        alert("🔥 Contact Gorilla Gaming for more information!");
+      });
+    });
+  </script>
+</body>
+</html>
