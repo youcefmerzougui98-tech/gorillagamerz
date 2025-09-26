@@ -190,15 +190,17 @@
         font-size: 14px;
       }
     }
-  </style>
+  
+.card{cursor:pointer;}
+</style>
 </head>
 <body>
-  <a class="dashboard-btn" href="index.html">Dashboard</a>
+  <a class="dashboard-btn" href="dashboard.html">Dashboard</a>
   <h1>GORILLA GAMING</h1>
-  <h2>VIP PROGRAM</h2>
+  <h2>VIP PROGRAM (Click to buy your own vip)</h2>
 
   <div class="container">
-    <div class="card">
+    <div class="card" id="vip">
       <h3>VIP</h3>
       <p class="price">10 € / month</p>
       <ul>
@@ -210,7 +212,7 @@
       </ul>
     </div>
 
-    <div class="card diamond">
+    <div class="card diamond" id="diamond">
       <h3>Diamond VIP</h3>
       <p class="price">Contact for Price</p>
       <ul>
@@ -230,12 +232,25 @@
     Join Our Community: <a href="https://www.fb.com/groups/gorillagamingcm" target="_blank">www.fb.com/groups/gorillagamingcm</a>
   </footer>
 
-  <script>
-    document.querySelectorAll(".card").forEach(card => {
-      card.addEventListener("click", () => {
-        alert("🔥 Contact Gorilla Gaming for more information!");
-      });
-    });
-  </script>
+  
+<script>
+  const base = "https://www.paypal.com/paypalme/gorillacm";
+
+  function openPayPal(pathSuffix) {
+    const url = `${base}${pathSuffix}?country.x=GB&locale.x=en_GB`;
+    window.open(url, "_blank", "noopener");
+  }
+
+  // VIP → montant pré-rempli à 10 EUR (forcé)
+  document.getElementById("vip").addEventListener("click", () => {
+    openPayPal("/10EUR");
+  });
+
+  // Diamond VIP → sans montant
+  document.getElementById("diamond").addEventListener("click", () => {
+    openPayPal("");
+  });
+</script>
+
 </body>
 </html>

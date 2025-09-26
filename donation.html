@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GORILLA GAMING — Donations</title>
+  <style>
+    :root{
+      --bg:#000000;
+      --panel:#0f0f10;
+      --panel-2:#121314;
+      --text:#eaeaea;
+      --muted:#a9a9a9;
+      --brand:#ffd300; /* VIP neon yellow */
+      --accent:#00ff90; /* VIP green */
+      --stroke:#242424;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.5;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:36px 22px 60px;
+    }
+    /* Title area (separate like VIP page) */
+    .title{
+      text-align:center;
+      margin:10px 0 28px;
+    }
+    .title h1{
+      margin:0;
+      font-size: clamp(32px, 5vw, 48px);
+      color:var(--brand);
+      letter-spacing:1px;
+      text-shadow: 0 0 8px rgba(255,211,0,.55), 0 0 2px rgba(255,211,0,.7);
+      font-weight:800;
+    }
+    .title .sub{
+      margin-top:8px;
+      font-size:14px;
+      color:var(--muted);
+      letter-spacing:.4px;
+    }
+    /* Donation section (centered panel like VIP cards) */
+    .wrap{
+      width:100%;
+      max-width:1020px;
+      display:flex;
+      justify-content:center;
+    }
+    .card{
+      width:100%;
+      max-width:900px;
+      background: radial-gradient(160% 140% at 0% 0%, rgba(0,255,144,.06), transparent 60%) , var(--panel);
+      border:1px solid var(--stroke);
+      border-radius:16px;
+      padding:26px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.45);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:26px;
+      align-items:start;
+    }
+    @media (max-width: 920px){
+      .grid{ grid-template-columns: 1fr; gap:18px; }
+    }
+    h2{
+      margin:0 0 14px;
+      color:var(--accent);
+      font-size: clamp(20px, 3.2vw, 26px);
+      letter-spacing:.5px;
+    }
+    p{margin:0 0 12px;}
+    .list{
+      margin:12px 0 0;
+      padding:0;
+      list-style:none;
+    }
+    .list li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      padding:9px 0;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:var(--accent);
+      box-shadow: 0 0 10px rgba(0,255,144,.6);
+      margin-top:7px;
+      flex:0 0 auto;
+    }
+    .panel{
+      background:var(--panel-2);
+      border:1px solid var(--stroke);
+      border-radius:14px;
+      padding:18px;
+    }
+    .btns{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(92px,1fr));
+      gap:10px;
+    }
+    @media (max-width:520px){
+      .btns{ grid-template-columns: repeat(2, minmax(120px,1fr)); }
+    }
+    .btn{
+      padding:12px 14px;
+      border-radius:12px;
+      background:#151516;
+      border:1px solid #2b2b2b;
+      color:var(--text);
+      font-weight:700;
+      cursor:pointer;
+      transition: transform .08s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.35); border-color:#3a3a3a; }
+    .custom{
+      display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;
+    }
+    .input{
+      flex:1 1 220px;
+      background:#0c0d0e;
+      border:1px solid var(--stroke);
+      color:var(--text);
+      border-radius:12px;
+      padding:12px 14px;
+      font-size:16px;
+      outline:none;
+      transition:border-color .2s ease, box-shadow .2s ease;
+    }
+    .input:focus{ border-color:#2f2f2f; box-shadow:0 0 0 3px rgba(0,255,144,.15); }
+    .hint{
+      margin-top:10px; color:var(--muted); font-size:13px;
+    }
+    .footer{
+      text-align:center; margin-top:16px; color:var(--muted); font-size:12px;
+    }
+
+    .dashboard-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 12px 22px;
+      background-color: #ffd500;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255, 213, 0, 0.6);
+      transition: 0.3s;
+      z-index: 1000;
+    }
+
+    .dashboard-btn:hover {
+      background-color: #ffb800;
+      box-shadow: 0 0 15px rgba(255, 213, 0, 0.8);
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .card {
+        width: 100%;
+        text-align: center;
+      }
+      .card ul {
+        text-align: left;
+        display: inline-block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .dashboard-btn {
+        top: 10px;
+        right: 10px;
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <a class="dashboard-btn" href="index.html">Dashboard</a>
+  <!-- Title block (separate) -->
+  <div class="title">
+    <h1>GORILLA GAMING</h1>
+    <div class="sub">Support the server — every donation helps keep the lights on.</div>
+  </div>
+
+  <!-- Donation section (centered like VIP card area) -->
+  <div class="wrap">
+    <div class="card">
+      <div class="grid">
+        <section>
+          <h2>Donate</h2>
+          <p>Help us cover server hosting, maintenance, and boosting costs. Donations are voluntary.</p>
+          <ul class="list">
+            <li><span class="dot"></span><span>Secure payments via PayPal.</span></li>
+            <li><span class="dot"></span><span>Quick presets or enter your own amount.</span></li>
+            <li><span class="dot"></span><span>Thank you for supporting Gorilla Gaming!</span></li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <div class="btns">
+            <button class="btn" data-amount="5">€5</button>
+            <button class="btn" data-amount="10">€10</button>
+            <button class="btn" data-amount="20">€20</button>
+            <button class="btn" data-amount="50">€50</button>
+          </div>
+          <div class="custom">
+            <input id="customAmount" class="input" type="number" min="1" step="1" placeholder="Custom amount (EUR)" />
+            <button id="donateBtn" class="btn">Donate</button>
+          </div>
+          <div class="hint">Click a preset or enter a custom amount, then proceed to PayPal.</div>
+        </section>
+      </div>
+      <div class="footer">Gorilla Gaming · Thanks for your support ♥</div>
+    </div>
+  </div>
+
+  <script>
+    const base = "https://www.paypal.com/paypalme/gorillacm";
+
+    function openPayPalEUR(amount){
+      const amt = String(amount || "").trim();
+      const path = amt ? `/${amt}EUR` : "";
+      const url = `${base}${path}?country.x=GB&locale.x=en_GB`;
+      window.open(url, "_blank", "noopener");
+    }
+
+    // Preset buttons
+    document.querySelectorAll("[data-amount]").forEach(b => {
+      b.addEventListener("click", () => openPayPalEUR(b.getAttribute("data-amount")));
+    });
+
+    // Custom amount
+    document.getElementById("donateBtn").addEventListener("click", () => {
+      const val = document.getElementById("customAmount").value;
+      const num = Number(val);
+      if (!val || isNaN(num) || num <= 0) {
+        alert("Please enter a valid EUR amount (minimum 1).");
+        return;
+      }
+      openPayPalEUR(Math.floor(num));
+    });
+  </script>
+</body>
+</html>
